@@ -1,0 +1,15 @@
+PROCEDURE Insertion_sort(VAR arr : ARRAY_OF INTEGER)
+VAR
+    i,j,tmp : INTEGER
+BEGIN
+    FOR i FROM 0 TO arr.length - 1 STEP 1 DO
+    j := i - 1
+    tmp := arr[i]
+            WHILE (j >= 1 and  j > tmp) DO
+                arr[i + 1] := arr[i]
+                j := j - 1
+            END_WHILE
+            arr[j + 1] := tmp
+    END_FOR
+    
+END 
